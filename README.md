@@ -13,12 +13,12 @@ UITableViewCell动画效果
     * 将MXAnimationCellClass文件夹内容添加到项目中
     * #import "UITableViewCell+MXCellAnimationExtral.h"
 #### 在代理方法中添加代码
-	```objc
-	- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    	//显示动画
-    	[cell showAnimationType:MXCellAnimationSlideFromLeft indexPath:indexPath];
-	}
-	```
+```objc
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    //显示动画
+    [cell showAnimationType:MXCellAnimationSlideFromLeft indexPath:indexPath];
+}
+```
 ## 代码示例
 ```objc
 /*ViewController.m*/
