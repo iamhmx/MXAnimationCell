@@ -1,27 +1,12 @@
-# MXAnimationCell
-UITableViewCell动画效果
-## 效果示例
-* 渐变<br/>![fade](https://github.com/iamhmx/MXAnimationCell/blob/master/MXAnimationCellDemo/screenshots/fade.gif)
-  
-* 从左进入<br/>![left](https://github.com/iamhmx/MXAnimationCell/blob/master/MXAnimationCellDemo/screenshots/slidefromleft.gif)
+//
+//  ViewController.m
+//  MXAnimationCellDemo
+//
+//  Created by msxf on 2017/6/16.
+//  Copyright © 2017年 yellow. All rights reserved.
+//
 
-## 使用说明
-#### 方法一：使用Cocoapods安装
-    * pod 'MXAnimationCell'
-    * #import "UITableViewCell+MXCellAnimationExtral.h"
-#### 方法二：导入代码文件
-    * 将MXAnimationCellClass文件夹内容添加到项目中
-    * #import "UITableViewCell+MXCellAnimationExtral.h"
-#### 在代理方法中添加代码
-	```objc
-	- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    	//显示动画
-    	[cell showAnimationType:MXCellAnimationSlideFromLeft indexPath:indexPath];
-	}
-	```
-## 代码示例
-```objc
-/*ViewController.m*/
+#import "ViewController.h"
 #import "UITableViewCell+MXCellAnimationExtral.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource> {
@@ -66,5 +51,10 @@ UITableViewCell动画效果
     [cell showAnimationType:MXCellAnimationSlideFromLeft indexPath:indexPath];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
 @end
-```
