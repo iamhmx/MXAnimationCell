@@ -46,9 +46,37 @@ static char const * const IndexPathKey = "indexPath";
         case MXCellAnimationSlideFromLeft:
         {
             self.frame = CGRectMake(-100, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
-            
+            self.alpha = 0;
             [UIView animateWithDuration:0.2 delay:self.indexPath.row * 0.1 options:UIViewAnimationOptionLayoutSubviews animations:^{
                 self.frame = CGRectMake(0, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
+                self.alpha = 1;
+            } completion:^(BOOL finished) {
+                
+            }];
+        }
+            break;
+            
+        case MXCellAnimationSlideFromRight:
+        {
+            self.frame = CGRectMake(100, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
+            self.alpha = 0;
+            [UIView animateWithDuration:0.2 delay:self.indexPath.row * 0.1 options:UIViewAnimationOptionLayoutSubviews animations:^{
+                self.frame = CGRectMake(0, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
+                self.alpha = 1;
+            } completion:^(BOOL finished) {
+                
+            }];
+        }
+            break;
+            
+        case MXCellAnimationExpand:
+        {
+            self.alpha = 0;
+            self.layer.anchorPoint = CGPointMake(1, 0);
+            self.layer.transform = CATransform3DRotate(CATransform3DIdentity, M_PI_2 * 0.8, 1, 0, 0);
+            [UIView animateWithDuration:0.2 delay:self.indexPath.row * 0.05 options:UIViewAnimationOptionLayoutSubviews animations:^{
+                self.alpha = 1;
+                self.layer.transform = CATransform3DIdentity;
             } completion:^(BOOL finished) {
                 
             }];

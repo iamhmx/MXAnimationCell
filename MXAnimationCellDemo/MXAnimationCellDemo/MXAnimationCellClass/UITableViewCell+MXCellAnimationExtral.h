@@ -10,7 +10,9 @@
 
 typedef NS_ENUM(NSUInteger, MXCellAnimationType) {
     MXCellAnimationFade,
-    MXCellAnimationSlideFromLeft
+    MXCellAnimationSlideFromLeft,
+    MXCellAnimationSlideFromRight,
+    MXCellAnimationExpand
 };
 
 @interface UITableViewCell (MXCellAnimationExtral)

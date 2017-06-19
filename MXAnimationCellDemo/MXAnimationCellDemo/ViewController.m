@@ -48,7 +48,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     //显示动画
-    [cell showAnimationType:MXCellAnimationSlideFromLeft indexPath:indexPath];
+    [cell showAnimationType:MXCellAnimationExpand indexPath:indexPath];
 }
 
 - (void)didReceiveMemoryWarning {

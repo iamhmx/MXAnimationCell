@@ -3,7 +3,11 @@ UITableViewCell动画效果
 ## 效果示例
 * 渐变<br/>![fade](https://github.com/iamhmx/MXAnimationCell/blob/master/MXAnimationCellDemo/screenshots/fade.gif)
   
-* 从左进入<br/>![left](https://github.com/iamhmx/MXAnimationCell/blob/master/MXAnimationCellDemo/screenshots/slidefromleft.gif)
+* 从左进入<br/>![left](https://github.com/iamhmx/MXAnimationCell/blob/master/MXAnimationCellDemo/screenshots/left.gif)
+
+* 从右进入<br/>![left](https://github.com/iamhmx/MXAnimationCell/blob/master/MXAnimationCellDemo/screenshots/right.gif)
+
+* 展开<br/>![left](https://github.com/iamhmx/MXAnimationCell/blob/master/MXAnimationCellDemo/screenshots/expand.gif)
 
 ## 使用说明
 #### 方法一：使用Cocoapods安装
