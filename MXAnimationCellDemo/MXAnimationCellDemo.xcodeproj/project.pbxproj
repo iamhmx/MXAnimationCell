@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90B59D371EF79C42004C3839 /* MXAnimationCellManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B59D361EF79C42004C3839 /* MXAnimationCellManager.m */; };
 		90F2141A1EF3C6B50041C039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F214191EF3C6B50041C039 /* main.m */; };
 		90F2141D1EF3C6B50041C039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2141C1EF3C6B50041C039 /* AppDelegate.m */; };
 		90F214201EF3C6B50041C039 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F2141F1EF3C6B50041C039 /* ViewController.m */; };
 		90F214231EF3C6B50041C039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F214211EF3C6B50041C039 /* Main.storyboard */; };
 		90F214251EF3C6B50041C039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F214241EF3C6B50041C039 /* Assets.xcassets */; };
 		90F214281EF3C6B50041C039 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F214261EF3C6B50041C039 /* LaunchScreen.storyboard */; };
-		90F214321EF3C7590041C039 /* UITableViewCell+MXCellAnimationExtral.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F214311EF3C7590041C039 /* UITableViewCell+MXCellAnimationExtral.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90B59D351EF79C42004C3839 /* MXAnimationCellManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXAnimationCellManager.h; sourceTree = "<group>"; };
+		90B59D361EF79C42004C3839 /* MXAnimationCellManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXAnimationCellManager.m; sourceTree = "<group>"; };
+		90B59D381EF79CD8004C3839 /* MXAnimationCellHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXAnimationCellHeader.h; sourceTree = "<group>"; };
 		90F214151EF3C6B50041C039 /* MXAnimationCellDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MXAnimationCellDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F214191EF3C6B50041C039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90F2141B1EF3C6B50041C039 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -27,8 +30,6 @@
 		90F214241EF3C6B50041C039 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90F214271EF3C6B50041C039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90F214291EF3C6B50041C039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90F214301EF3C7590041C039 /* UITableViewCell+MXCellAnimationExtral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MXCellAnimationExtral.h"; sourceTree = "<group>"; };
-		90F214311EF3C7590041C039 /* UITableViewCell+MXCellAnimationExtral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+MXCellAnimationExtral.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +87,9 @@
 		90F2142F1EF3C7590041C039 /* MXAnimationCellClass */ = {
 			isa = PBXGroup;
 			children = (
-				90F214301EF3C7590041C039 /* UITableViewCell+MXCellAnimationExtral.h */,
-				90F214311EF3C7590041C039 /* UITableViewCell+MXCellAnimationExtral.m */,
+				90B59D381EF79CD8004C3839 /* MXAnimationCellHeader.h */,
+				90B59D351EF79C42004C3839 /* MXAnimationCellManager.h */,
+				90B59D361EF79C42004C3839 /* MXAnimationCellManager.m */,
 			);
 			path = MXAnimationCellClass;
 			sourceTree = "<group>";
@@ -167,7 +169,7 @@
 				90F214201EF3C6B50041C039 /* ViewController.m in Sources */,
 				90F2141D1EF3C6B50041C039 /* AppDelegate.m in Sources */,
 				90F2141A1EF3C6B50041C039 /* main.m in Sources */,
-				90F214321EF3C7590041C039 /* UITableViewCell+MXCellAnimationExtral.m in Sources */,
+				90B59D371EF79C42004C3839 /* MXAnimationCellManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

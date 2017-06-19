@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UITableViewCell+MXCellAnimationExtral.h"
+#import "MXAnimationCellManager.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource> {
     UITableView *_tableView;
@@ -24,15 +24,18 @@
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
     
+    [MXAnimationCellManager shareInstance].tableView = _tableView;
+    [MXAnimationCellManager shareInstance].type = MXCellAnimationExpand;
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshTableView)];
 }
 
 - (void)refreshTableView {
-    [_tableView reloadData];
+    [[MXAnimationCellManager shareInstance] show];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 30;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -44,11 +47,6 @@
     cell.textLabel.text = [NSString stringWithFormat:@"Row %ld",indexPath.row];
     cell.contentView.backgroundColor = [UIColor orangeColor];
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    //显示动画
-    [cell showAnimationType:MXCellAnimationExpand indexPath:indexPath];
 }
 
 - (void)didReceiveMemoryWarning {

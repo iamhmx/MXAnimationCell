@@ -12,21 +12,23 @@ UITableViewCell动画效果
 ## 使用说明
 #### 方法一：使用Cocoapods安装
     * pod 'MXAnimationCell'
-    * #import "UITableViewCell+MXCellAnimationExtral.h"
+    * #import "MXAnimationCellManager.h"
 #### 方法二：导入代码文件
     * 将MXAnimationCellClass文件夹内容添加到项目中
-    * #import "UITableViewCell+MXCellAnimationExtral.h"
-#### 在代理方法中添加代码
+    * #import "MXAnimationCellManager.h"
+#### 添加代码
 ```objc
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    //显示动画
-    [cell showAnimationType:MXCellAnimationSlideFromLeft indexPath:indexPath];
-}
+//绑定展示动画的tableView
+[MXAnimationCellManager shareInstance].tableView = _tableView;
+//指定动画类型
+[MXAnimationCellManager shareInstance].type = MXCellAnimationExpand;
+//在需要显示动画的地方调用show方法
+[[MXAnimationCellManager shareInstance] show];
 ```
 ## 代码示例
 ```objc
 /*ViewController.m*/
-#import "UITableViewCell+MXCellAnimationExtral.h"
+#import "MXAnimationCellManager.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource> {
     UITableView *_tableView;
@@ -43,15 +45,18 @@ UITableViewCell动画效果
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
     
+    [MXAnimationCellManager shareInstance].tableView = _tableView;
+    [MXAnimationCellManager shareInstance].type = MXCellAnimationExpand;
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshTableView)];
 }
 
 - (void)refreshTableView {
-    [_tableView reloadData];
+    [[MXAnimationCellManager shareInstance] show];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 30;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -63,11 +68,6 @@ UITableViewCell动画效果
     cell.textLabel.text = [NSString stringWithFormat:@"Row %ld",indexPath.row];
     cell.contentView.backgroundColor = [UIColor orangeColor];
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    //显示动画
-    [cell showAnimationType:MXCellAnimationSlideFromLeft indexPath:indexPath];
 }
 
 @end
