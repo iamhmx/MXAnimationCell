@@ -25,7 +25,7 @@
     [self.view addSubview:_tableView];
     
     [MXAnimationCellManager shareInstance].tableView = _tableView;
-    [MXAnimationCellManager shareInstance].type = MXCellAnimationExpand;
+    [MXAnimationCellManager shareInstance].type = MXCellAnimationRotateCw;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshTableView)];
 }
