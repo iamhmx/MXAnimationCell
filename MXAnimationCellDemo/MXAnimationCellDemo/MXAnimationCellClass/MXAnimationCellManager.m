@@ -38,16 +38,22 @@ static MXAnimationCellManager *manager;
         self.animateSelector = @selector(rotateCw:);
     } else if (type == MXCellAnimationRotateAnti) {
         self.animateSelector = @selector(rotateAnti:);
+    } else if (type == MXCellAnimationCross) {
+        
     }
 }
 
 - (void)show {
-    IMP imp = [self methodForSelector:self.animateSelector];
-    void (*func)(id, SEL, UITableViewCell*) = (void *)imp;
-    for (UITableViewCell *cell in self.visiableCells) {
-        //消除performselector may cause a leak警告
-        //[self performSelector:self.animateSelector withObject:cell];
-        func(self, self.animateSelector, cell);
+    if (self.type != MXCellAnimationCross) {
+        IMP imp = [self methodForSelector:self.animateSelector];
+        void (*func)(id, SEL, UITableViewCell*) = (void *)imp;
+        for (UITableViewCell *cell in self.visiableCells) {
+            //消除performselector may cause a leak警告
+            //[self performSelector:self.animateSelector withObject:cell];
+            func(self, self.animateSelector, cell);
+        }
+    } else {
+        [self cross];
     }
 }
 
@@ -115,6 +121,21 @@ static MXAnimationCellManager *manager;
     } completion:^(BOOL finished) {
         
     }];
+}
+
+- (void)cross {
+    CGFloat width = self.tableView.frame.size.width;
+    for (NSInteger i = 0; i < self.visiableCells.count; i++) {
+        UITableViewCell *cell = self.visiableCells[i];
+        if (i % 2 == 0) {
+            cell.frame = CGRectMake(-width/2, cell.frame.origin.y, cell.frame.size.width, cell.frame.size.height);
+        } else {
+            cell.frame = CGRectMake(width/2, cell.frame.origin.y, cell.frame.size.width, cell.frame.size.height);
+        }
+        [UIView animateWithDuration:0.5 animations:^{
+            cell.frame = CGRectMake(0, cell.frame.origin.y, cell.frame.size.width, cell.frame.size.height);
+        }];
+    }
 }
 
 - (NSInteger)currentRow:(UITableViewCell*)cell {

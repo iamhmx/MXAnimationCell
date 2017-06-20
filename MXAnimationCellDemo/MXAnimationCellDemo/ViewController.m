@@ -25,7 +25,7 @@
     [self.view addSubview:_tableView];
     
     [MXAnimationCellManager shareInstance].tableView = _tableView;
-    [MXAnimationCellManager shareInstance].type = MXCellAnimationRotateCw;
+    [MXAnimationCellManager shareInstance].type = MXCellAnimationCross;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshTableView)];
 }
@@ -35,7 +35,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 30;
+    return 10;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -45,8 +45,12 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
     cell.textLabel.text = [NSString stringWithFormat:@"Row %ld",indexPath.row];
-    cell.contentView.backgroundColor = [UIColor orangeColor];
+    cell.contentView.backgroundColor = [self randomColor];
     return cell;
+}
+
+- (UIColor*)randomColor {
+    return [UIColor colorWithRed:(random()%255)/255.0 green:(random()%255)/255.0 blue:(random()%255)/255.0 alpha:1];
 }
 
 - (void)didReceiveMemoryWarning {

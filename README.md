@@ -9,6 +9,7 @@ UITableViewCell动画效果
 
 * 展开<br/>![left](https://github.com/iamhmx/MXAnimationCell/blob/master/MXAnimationCellDemo/screenshots/expand.gif)
 
+* 交叉<br/>![left](https://github.com/iamhmx/MXAnimationCell/blob/master/MXAnimationCellDemo/screenshots/cross.gif)
 ## 使用说明
 #### 方法一：使用Cocoapods安装
     * pod 'MXAnimationCell'

@@ -19,7 +19,8 @@ typedef NS_ENUM(NSUInteger, MXCellAnimationType) {
     MXCellAnimationSlideFromRight,
     MXCellAnimationExpand,
     MXCellAnimationRotateCw,
-    MXCellAnimationRotateAnti
+    MXCellAnimationRotateAnti,
+    MXCellAnimationCross
 };
 
 #endif /* MXAnimationCellHeader_h */
