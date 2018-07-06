@@ -2,7 +2,7 @@
 //  MXAnimationCellManager.h
 //  MXAnimationCellDemo
 //
-//  Created by msxf on 2017/6/19.
+//  Created by yellow on 2017/6/19.
 //  Copyright © 2017年 yellow. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  MXAnimationCellDemo
 //
-//  Created by msxf on 2017/6/16.
+//  Created by yellow on 2017/6/16.
 //  Copyright © 2017年 yellow. All rights reserved.
 //
 

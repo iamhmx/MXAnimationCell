@@ -292,7 +292,7 @@
 				DEVELOPMENT_TEAM = 3GZ2MLR74W;
 				INFOPLIST_FILE = MXAnimationCellDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.msxf.MXAnimationCellDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yellow.MXAnimationCellDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -304,7 +304,7 @@
 				DEVELOPMENT_TEAM = 3GZ2MLR74W;
 				INFOPLIST_FILE = MXAnimationCellDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.msxf.MXAnimationCellDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yellow.MXAnimationCellDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
